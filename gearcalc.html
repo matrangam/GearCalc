@@ -13,8 +13,9 @@
 		</div>
 		<div calss="field">
 			Enter your Back Gear Size:
-			<input id="front" name="front" type="text" size="2">
+			<input id="back" name="back" type="text" size="2">
 		</div>
+		<input type="button" value="Calculate!" onclick="getGears();">
 		<table id="ratiotable">
 			<tr>
 				<th rowspan="2">Gear<br />Level</th>
@@ -35,15 +36,15 @@
 				<th>kph</th>
 			</tr>
 			<tr>
-				<td>None</td>
-				<td>0</td>				
-				<td>0</td>
-				<td>0</td>				
-				<td>0</td>
-				<td>0</td>				
-				<td>0</td>
-				<td>0</td>				
-				<td>0</td>
-				<td>0</td>				
+				<td id="level">None</td>
+				<td id="meters">0</td>				
+				<td id="mph60">0</td>
+				<td id="kph60">0</td>				
+				<td id="mph80">0</td>
+				<td id="kph80">0</td>				
+				<td id="mph100">0</td>
+				<td id="kph100">0</td>				
+				<td id="mph120">0</td>
+				<td id="kph120">0</td>				
 			</tr>
 </body>
