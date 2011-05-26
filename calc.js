@@ -70,7 +70,3 @@ function getGearsAndSet() {
     replaceNodeText("mph120", mph120.toFixed(1));
 
 }
-
-/*
-100 revolution == 1km @ 10 meters
-*/
