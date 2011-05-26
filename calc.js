@@ -1,17 +1,33 @@
 function replaceNodeText(id, newText) {
     var node = document.getElementById(id);
-    while (node.firstChild)
+    if (node.firstChild){
       node.removeChild(node.firstChild);
     node.appendChild(document.createTextNode(newText));
+    }
 }
     
 function getGears() {
     var front = document.getElementById("front").value;
     var back = document.getElementById("back").value;
     var combined = front/back;
-    replaceNodeText("level", combined.toFixed(2));
+
+    var level = "";
+    if (combined > 4) {
+        level = "Ballsy";
+    }
+    else if (combined > 3) {
+        level = "Pretty Tough";
+    }
+    else if (combined > 2) {
+        level = "Daily Driver";
+    }
+    else if (combined > 0) {
+        level = "Sissy";
+    }
+    replaceNodeText("level", level);
 
 // wheel circumference is based on 700c w/ 25mm tyres. a diameter of 622mm + 25cm (2111.15mm/2.11m)    
+
     const wheel_circ = 2.11115;
     var meters = wheel_circ*combined;
     replaceNodeText("meters", meters.toFixed(0));
