@@ -1,0 +1,54 @@
+<head>
+	<style type="text/css">
+		table, th, td
+		{
+			border: 1px solid black;
+			text-align: center;
+		}
+	</style>
+</head>
+
+<body>
+	<h1>Javascript Gear Ratio calculator</h1>
+	<h2>The idea here is to make a simple javascript app that calculates gear ratios for a fixed gear bicycle</h2>
+	<form name="calculator">
+		<div calss="field">
+			Enter your Front Gear Size:
+			<input id="front" name="front" type="text" size="3">
+		</div>
+		<div calss="field">
+			Enter your Back Gear Size:
+			<input id="front" name="front" type="text" size="2">
+		</div>
+		<table id="ratiotable">
+			<tr>
+				<th rowspan="2">Gear<br />Level</th>
+				<th rowspan="2">Meter<br />Development:</th>
+				<th colspan="2" width="100">60 Rpm</th>
+				<th colspan="2" width="100">80 Rpm</th>
+				<th colspan="2" width="100">100 Rpm</th>
+				<th colspan="2" width="100">120 Rpm</th>
+			</tr>
+			<tr>
+				<th>mph</th>
+				<th>kph</th>
+				<th>mph</th>
+				<th>kph</th>
+				<th>mph</th>
+				<th>kph</th>
+				<th>mph</th>
+				<th>kph</th>
+			</tr>
+			<tr>
+				<td>None</td>
+				<td>0</td>				
+				<td>0</td>
+				<td>0</td>				
+				<td>0</td>
+				<td>0</td>				
+				<td>0</td>
+				<td>0</td>				
+				<td>0</td>
+				<td>0</td>				
+			</tr>
+</body>
