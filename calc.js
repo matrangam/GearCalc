@@ -20,7 +20,7 @@ function getWheelCirc() {
     return wheelMeter;
 }
 
-function getGears() {
+function getGearsAndSet() {
     //gets front and back gears, sets them to a var, then calculates and sets speeds based on fixed rpm values
     var front = document.getElementById("front").value;
     var back = document.getElementById("back").value;
