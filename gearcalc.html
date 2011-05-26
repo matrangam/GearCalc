@@ -6,7 +6,7 @@
 <body>
 	<h1>Javascript Gear Ratio calculator</h1>
 	<h2>The idea here is to make a simple javascript app that calculates gear ratios for a fixed gear bicycle</h2>
-	<form name="calculator">
+	<form name="calcform">
 		<div calss="field">
 			Enter your Front Gear Size:
 			<input id="front" name="front" type="text" size="3">
@@ -16,26 +16,27 @@
 			<input id="back" name="back" type="text" size="2">
 		</div>
 		<select name="diameter" size="1">
-			<option id="wheel" value="1">700c with 20mm tires</option> <!--- 622mm -->
-			<option id="wheel" value="2">700c with 25mm tires</option>
-			<option id="wheel" value="3">700c with 35mm tires</option>
-			<option id="wheel" value="4">700c with 48mm tires</option>
+			<option id="wheel" value="662">700c with 20mm tires</option> <!--- 622mm -->
+			<option id="wheel" value="672">700c with 25mm tires</option>
+			<option id="wheel" value="692">700c with 35mm tires</option>
+			<option id="wheel" value="718">700c with 48mm tires</option>
 
-			<option id="wheel" value="5">650c with 20mm tires</option>	<!--- 571mm -->
-			<option id="wheel" value="6">650c with 25mm tires</option>
-			<option id="wheel" value="7">650c with 35mm tires</option>
-			<option id="wheel" value="8">650c with 48mm tires</option>  
+			<option id="wheel" value="611">650c with 20mm tires</option>	<!--- 571mm -->
+			<option id="wheel" value="621">650c with 25mm tires</option>
+			<option id="wheel" value="641">650c with 35mm tires</option>
+			<option id="wheel" value="667">650c with 48mm tires</option>  
 			
-			<option id="wheel" value="9">27inch with 1 inch (25.4mm) tires</option>  <!--- 630mm -->
-			<option id="wheel" value="10">27inch with 1.5 inch (38.1mm) tires</option>  
-			<option id="wheel" value="11">27inch with 1.75 inch (44.45mm) tires</option>  
-			<option id="wheel" value="12">27inch with 2 inch (50.8mm) tires</option>  
+			<option id="wheel" value="680.8">27inch with 1 inch (25.4mm) tires</option>  <!--- 630mm -->
+			<option id="wheel" value="706.2">27inch with 1.5 inch (38.1mm) tires</option>  
+			<option id="wheel" value="718.9">27inch with 1.75 inch (44.45mm) tires</option>  
+			<option id="wheel" value="731.6">27inch with 2 inch (50.8mm) tires</option>  
 		</select>
 			<input type="button" value="Calculate!" onclick="getGears();">
 		<table id="ratiotable">
 			<tr>
 				<th rowspan="2">Gear<br />Level</th>
 				<th rowspan="2">Meter<br />Development:</th>
+				<th rowspan="2">Wheel<br />Circumference:</th>
 				<th colspan="2" width="100">60 Rpm</th>
 				<th colspan="2" width="100">80 Rpm</th>
 				<th colspan="2" width="100">100 Rpm</th>
@@ -54,6 +55,7 @@
 			<tr>
 				<td id="level">None</td>
 				<td id="meters">0</td>				
+				<td id="circ">None</td>
 				<td id="mph60">0</td>
 				<td id="kph60">0</td>				
 				<td id="mph80">0</td>

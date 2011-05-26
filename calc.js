@@ -1,12 +1,27 @@
 function replaceNodeText(id, newText) {
+    //finds a node by id and replaces it with newText
     var node = document.getElementById(id);
     if (node.firstChild){
       node.removeChild(node.firstChild);
     node.appendChild(document.createTextNode(newText));
     }
 }
-    
+
+function getWheelCirc() {
+    //set wheel circumferenced based on the dropdown menu
+    var pi = Math.PI;
+    var select = document.calcform.diameter;
+    for (var i = 0; i<select.options.length; i++) {
+        if (select.options[i].selected == true) {
+            var circ = select.value;
+        }
+    }
+    var wheelMeter = (circ*pi)*.001;
+    return wheelMeter;
+}
+
 function getGears() {
+    //gets front and back gears, sets them to a var, then calculates and sets speeds based on fixed rpm values
     var front = document.getElementById("front").value;
     var back = document.getElementById("back").value;
     var combined = front/back;
@@ -26,12 +41,14 @@ function getGears() {
     }
     replaceNodeText("level", level);
 
-// wheel circumference is based on 700c w/ 25mm tyres. a diameter of 622mm + 25cm (2111.15mm/2.11m)    
+// wheel circumference is based on 700c w/ 25mm tyres. a diameter of 622mm + 25cm*2 (2111.15mm/2.11m)
 
-    const wheel_circ = 2.11115;
+    var wheel_circ = getWheelCirc();
+    replaceNodeText("circ", wheel_circ)
+
     var meters = wheel_circ*combined;
     replaceNodeText("meters", meters.toFixed(0));
-    
+
     var kph60 = meters*3.6;
     replaceNodeText("kph60", kph60.toFixed(1));
     var mph60 = kph60/1.60934;
@@ -55,5 +72,5 @@ function getGears() {
 }
 
 /*
-100 revolution == 1km
+100 revolution == 1km @ 10 meters
 */
