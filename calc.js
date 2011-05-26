@@ -26,6 +26,7 @@ function getGears() {
     var back = document.getElementById("back").value;
     var combined = front/back;
 
+    //sets gear level
     var level = "";
     if (combined > 4) {
         level = "Ballsy";
@@ -41,10 +42,9 @@ function getGears() {
     }
     replaceNodeText("level", level);
 
-// wheel circumference is based on 700c w/ 25mm tyres. a diameter of 622mm + 25cm*2 (2111.15mm/2.11m)
-
+    //sets circumferenced 
     var wheel_circ = getWheelCirc();
-    replaceNodeText("circ", wheel_circ)
+    replaceNodeText("circ", wheel_circ.toFixed(4))
 
     var meters = wheel_circ*combined;
     replaceNodeText("meters", meters.toFixed(0));
