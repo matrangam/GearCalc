@@ -15,7 +15,7 @@
 			Enter your Back Gear Size:
 			<input id="back" name="back" type="text" size="2">
 		</div>
-		<select name="diameter" size="1">
+		<select name="diameter" size="1" onchange="getGearsAndSet();">
 			<option id="wheel" value="662">700c with 20mm tires</option> <!--- 622mm -->
 			<option id="wheel" value="672">700c with 25mm tires</option>
 			<option id="wheel" value="692">700c with 35mm tires</option>
@@ -25,7 +25,7 @@
 			<option id="wheel" value="621">650c with 25mm tires</option>
 			<option id="wheel" value="641">650c with 35mm tires</option>
 			<option id="wheel" value="667">650c with 48mm tires</option>  
-			
+
 			<option id="wheel" value="680.8">27inch with 1 inch (25.4mm) tires</option>  <!--- 630mm -->
 			<option id="wheel" value="706.2">27inch with 1.5 inch (38.1mm) tires</option>  
 			<option id="wheel" value="718.9">27inch with 1.75 inch (44.45mm) tires</option>  

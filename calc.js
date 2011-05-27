@@ -30,15 +30,23 @@ function getGearsAndSet() {
     var level = "";
     if (combined > 4) {
         level = "Ballsy";
+        document.getElementById("data").style.backgroundColor="red";
+        document.getElementById("data").style.color="white";        
     }
     else if (combined > 3) {
         level = "Pretty Tough";
+        document.getElementById("data").style.backgroundColor="blue";
+        document.getElementById("data").style.color="white";        
     }
     else if (combined > 2) {
         level = "Daily Driver";
+        document.getElementById("data").style.backgroundColor="lightblue";
+        document.getElementById("data").style.color="black";        
     }
     else if (combined > 0) {
         level = "Sissy";
+        document.getElementById("data").style.backgroundColor="pink";
+        document.getElementById("data").style.color="black";        
     }
     replaceNodeText("level", level);
 
